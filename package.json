@@ -1,0 +1,35 @@
+{
+  "name": "typescrypt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Rafael Dametto",
+    "email": "cacotpds@gmail.com"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caco0/typescript-initial.git"
+  },
+  "dependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^5.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/Caco0/typescript-initial/issues"
+  },
+  "homepage": "https://github.com/Caco0/typescript-initial#readme",
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts"
+}
