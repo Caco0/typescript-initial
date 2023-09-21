@@ -1,26 +1,15 @@
 "use strict";
-// interfaces (type x interface)
-var bot1 = {
-    id: "1",
-    name: "Jaspion",
-};
-var bot2 = {
-    id: "1",
-    name: "Jaspion",
-    sayHello: function () {
-        throw new Error("Function not implemented.");
-    },
-};
-// console.log(bot1, bot2);
-var Pessoa = /** @class */ (function () {
-    function Pessoa(id, name) {
-        this.id = id;
+var Character = /** @class */ (function () {
+    function Character(name, strength, skill) {
         this.name = name;
+        this.strength = strength;
+        this.skill = skill;
     }
-    Pessoa.prototype.sayHello = function () {
-        return "I am ".concat(this.name, " e meu ID \u00E9 ").concat(this.id);
+    Character.prototype.attack = function () {
+        console.log("Attack with strength ".concat(this.strength, " fire power"));
     };
-    return Pessoa;
+    return Character;
 }());
-var p = new Pessoa(1, "Wolverine");
-console.log(p.sayHello());
+var p1 = new Character("Forceps", 10, 98);
+console.log(p1);
+p1.attack();

@@ -1,18 +1,8 @@
-type robot = {
-    readonly id: number | string;
+declare class Character {
     name: string;
-};
-interface robot2 {
-    readonly id: number | string;
-    name: string;
-    sayHello(): string;
+    strength: number;
+    skill: number;
+    constructor(name: string, strength: number, skill: number);
+    attack(): void;
 }
-declare const bot1: robot;
-declare const bot2: robot2;
-declare class Pessoa implements robot2 {
-    id: string | number;
-    name: string;
-    constructor(id: number | number, name: string);
-    sayHello(): string;
-}
-declare const p: Pessoa;
+declare const p1: Character;
