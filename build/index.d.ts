@@ -1,5 +1,18 @@
-type Hero = {
+type robot = {
+    readonly id: number | string;
     name: string;
-    vulgo: string;
 };
-declare function printObjeto(pessoa: Hero): void;
+interface robot2 {
+    readonly id: number | string;
+    name: string;
+    sayHello(): string;
+}
+declare const bot1: robot;
+declare const bot2: robot2;
+declare class Pessoa implements robot2 {
+    id: string | number;
+    name: string;
+    constructor(id: number | number, name: string);
+    sayHello(): string;
+}
+declare const p: Pessoa;
